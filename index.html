@@ -22,7 +22,7 @@
 	<body>
 		<div class="container">
 			<header class="header">
-				<h1><i class="fas fa-code"></i> Developer</h1>
+				<h1><i class="fas fa-code"></i> <span id="developer-text"></span></h1>
 				
 				<div class="developer-info">
 					<p>¡Hola! soy Jaime Riquelme, <span class="highlight">desarrollador</span> de Santiago, <span class="highlight">Chile <i class="fas fa-flag"></i></span>.</p>
@@ -229,5 +229,23 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<!-- Script para el efecto de escritura -->
+		<script>
+			const text = "Developer";
+			let index = 0;
+			const speed = 100; // Velocidad de escritura en milisegundos
+
+			function typeWriter() {
+				if (index < text.length) {
+					document.getElementById("developer-text").innerHTML += text.charAt(index);
+					index++;
+					setTimeout(typeWriter, speed);
+				}
+			}
+
+			// Iniciar el efecto de escritura al cargar la página
+			window.onload = typeWriter;
+		</script>
 	</body>
 </html>
