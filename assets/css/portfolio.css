@@ -323,6 +323,11 @@ body {
     background: linear-gradient(135deg, #218838, var(--secondary-color));
 }
 
+.btn-orange {
+    background-color: #ff8c00;
+    color: white;
+}
+
 .about-me {
     margin: 4rem 0;
     text-align: center;
